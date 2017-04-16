@@ -20,10 +20,12 @@ Calculator.prototype = {
   },
 
   divide: function(number){
-    this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
-    if (number === 0 || this.previousTotal === 0);
-    return ('Cannot divide by zero');
-
+    if (number === 0) {
+      this.runningTotal = 'Cannot divide by zero';
+    } else {
+      this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+    }
+   
   },
 
   numberClick: function(number) {
