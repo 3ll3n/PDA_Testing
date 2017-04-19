@@ -62,6 +62,34 @@ describe('calculator functionality', function() {
 
   });
 
+  it('should return Infinity when more than 23 numbers are entered', function() {
+    element(by.css('#number1')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#number3')).click();
+    element(by.css('#number4')).click();
+    element(by.css('#number5')).click();
+    element(by.css('#number6')).click();
+    element(by.css('#number7')).click();
+    element(by.css('#number8')).click();
+    element(by.css('#number9')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#number3')).click();
+    element(by.css('#number4')).click();
+    element(by.css('#number5')).click();
+    element(by.css('#number6')).click();
+    element(by.css('#number7')).click();
+    element(by.css('#number8')).click();
+    element(by.css('#number9')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#number3')).click();
+    element(by.css('#number4')).click();
+    element(by.css('#number5')).click();
+    element(by.css('#number6')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('Infinity');
+  });
+
   // // when dividing by zero it returns Infinity. 
 
   it('should return the string cannot divide by zero when trying to divide by zero', function() {
